@@ -45,8 +45,14 @@ const About = () => {
   return (
     <div className="min-h-screen bg-background pt-20">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-r from-accent to-background">
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20 bg-gradient-to-br from-accent via-accent/80 to-secondary-light overflow-hidden">
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10"
+          style={{ backgroundImage: `url(${"/lovable-uploads/0c632d7f-9b11-41ff-aaa1-e4be143a05b6.png"})` }}
+        >
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-r from-accent/70 to-secondary-light/50"></div>
+        <div className="relative z-10 max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
             About KisanSeva Plus
           </h1>
@@ -103,7 +109,7 @@ const About = () => {
       </section>
 
       {/* Values Section */}
-      <section className="py-20 bg-accent/30">
+      <section className="py-20 bg-gradient-to-br from-accent/20 via-secondary-light/30 to-accent/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
@@ -173,7 +179,7 @@ const About = () => {
           </div>
 
           {/* Founders Story Section */}
-          <div className="mt-16 bg-gradient-to-r from-primary/5 to-accent-green/5 rounded-2xl p-8">
+          <div className="mt-16 bg-gradient-to-r from-primary/5 via-secondary-light/10 to-accent-green/5 rounded-2xl p-8 border border-secondary-light/30">
             <div className="text-center max-w-4xl mx-auto">
               <h3 className="text-2xl font-bold text-foreground mb-6">Our Story</h3>
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
@@ -203,7 +209,7 @@ const About = () => {
       </section>
 
       {/* Impact Section */}
-      <section className="py-20 bg-gradient-to-r from-primary/10 to-accent-green/10">
+      <section className="py-20 bg-gradient-to-br from-primary/8 via-secondary-light/20 to-accent-green/8">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
             Our Impact
@@ -212,15 +218,15 @@ const About = () => {
             Since our launch, we've helped thousands of farmers improve their productivity and income
           </p>
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-background rounded-lg p-6 shadow-md">
+            <div className="bg-background rounded-lg p-6 shadow-md border border-secondary-light/50 hover:shadow-lg transition-shadow duration-300">
               <div className="text-3xl font-bold text-primary mb-2">500+</div>
               <div className="text-muted-foreground">Villages Connected</div>
             </div>
-            <div className="bg-background rounded-lg p-6 shadow-md">
+            <div className="bg-background rounded-lg p-6 shadow-md border border-secondary-light/50 hover:shadow-lg transition-shadow duration-300">
               <div className="text-3xl font-bold text-accent-green mb-2">₹2Cr+</div>
               <div className="text-muted-foreground">Farmer Income Generated</div>
             </div>
-            <div className="bg-background rounded-lg p-6 shadow-md">
+            <div className="bg-background rounded-lg p-6 shadow-md border border-secondary-light/50 hover:shadow-lg transition-shadow duration-300">
               <div className="text-3xl font-bold text-secondary-dark mb-2">10,000+</div>
               <div className="text-muted-foreground">Successful Bookings</div>
             </div>
