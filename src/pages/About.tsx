@@ -27,19 +27,18 @@ const About = () => {
 
   const team = [
     {
-      name: "Rajesh Kumar",
+      name: "Arvind Kumar",
       role: "Founder & CEO",
-      description: "Agricultural engineer with 15+ years in farming technology",
+      description: "1st-year Data Science student at IIT Madras from Ranchi, Jharkhand. Passionate about leveraging technology to solve real agricultural challenges.",
+      location: "Originally from Ranchi, Jharkhand",
+      education: "IIT Madras - Data Science",
     },
     {
-      name: "Priya Sharma",
-      role: "Head of Operations",
-      description: "Expert in rural development and farmer welfare programs",
-    },
-    {
-      name: "Amit Singh",
-      role: "Technology Lead",
-      description: "Software architect specializing in agricultural applications",
+      name: "Aman Raj",
+      role: "Co-Founder & CTO",
+      description: "1st-year Data Science student at IIT Madras from Ranchi, Jharkhand. Focused on building scalable tech solutions for rural farming communities.",
+      location: "Originally from Ranchi, Jharkhand", 
+      education: "IIT Madras - Data Science",
     },
   ];
 
@@ -69,7 +68,11 @@ const About = () => {
               <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
                 To empower farmers across India by providing them with easy access to modern agricultural 
                 equipment, skilled labor, and technology-driven solutions that increase productivity and 
-                improve livelihoods.
+                improve livelihoods. <em>Hafto ka kaam, ganto mein</em> - transforming weeks of work into hours.
+              </p>
+              <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
+                As young students from rural India, we understand the challenges farmers face daily. Our mission 
+                is simple: make farming easier, faster, and more profitable for rural communities through innovative technology.
               </p>
               <div className="flex items-center space-x-4">
                 <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
@@ -84,10 +87,14 @@ const About = () => {
             <div>
               <div className="bg-gradient-to-br from-primary/10 to-accent-green/10 rounded-2xl p-8">
                 <h3 className="text-2xl font-bold text-foreground mb-4">Our Vision</h3>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-muted-foreground leading-relaxed mb-4">
                   To become India's leading agricultural platform that bridges the gap between technology 
                   and traditional farming, creating a sustainable ecosystem where every farmer has access 
                   to the resources they need to thrive.
+                </p>
+                <p className="text-muted-foreground leading-relaxed">
+                  <em>"Sapno ka startup, kisan ke liye"</em> - A dream startup, for the farmers. We believe 
+                  that young minds can create big changes, and we're proving it every day.
                 </p>
               </div>
             </div>
@@ -132,32 +139,65 @@ const About = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Meet Our Team
+              Meet Our Young Founders
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Our experienced team combines agricultural expertise with technological innovation
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              Two passionate students from Ranchi, Jharkhand, studying at IIT Madras and working hard to revolutionize 
+              agriculture through technology. <em>Choti umar, bade sapne</em> - young age, big dreams!
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {team.map((member, index) => (
               <Card key={index} className="text-center hover:shadow-lg transition-shadow duration-300">
                 <CardHeader>
                   <div className="w-24 h-24 mx-auto bg-gradient-to-br from-primary to-accent-green rounded-full flex items-center justify-center mb-4">
                     <Users className="h-12 w-12 text-white" />
                   </div>
-                  <CardTitle className="text-xl">{member.name}</CardTitle>
-                  <CardDescription className="text-primary font-medium">
+                  <CardTitle className="text-2xl">{member.name}</CardTitle>
+                  <CardDescription className="text-primary font-medium text-lg">
                     {member.role}
                   </CardDescription>
+                  <div className="space-y-1 mt-2">
+                    <p className="text-sm text-accent-green font-medium">{member.education}</p>
+                    <p className="text-xs text-muted-foreground">{member.location}</p>
+                  </div>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-muted-foreground text-center">
+                  <p className="text-muted-foreground text-center leading-relaxed">
                     {member.description}
                   </p>
                 </CardContent>
               </Card>
             ))}
+          </div>
+
+          {/* Founders Story Section */}
+          <div className="mt-16 bg-gradient-to-r from-primary/5 to-accent-green/5 rounded-2xl p-8">
+            <div className="text-center max-w-4xl mx-auto">
+              <h3 className="text-2xl font-bold text-foreground mb-6">Our Story</h3>
+              <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                Born and raised in Ranchi, Jharkhand, we've seen firsthand the struggles of farming families. 
+                As 1st-year Data Science students at IIT Madras, we realized we could use our technical skills 
+                to solve real problems that affect millions of farmers across India.
+              </p>
+              <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                <em>"Padhenge aur desh ke kisano ki madad karenge"</em> - We'll study and help the nation's farmers. 
+                That's our promise. Every late night coding session, every line of code we write, is dedicated to 
+                making farming easier, faster, and more profitable for rural communities.
+              </p>
+              <div className="flex flex-wrap justify-center gap-4 text-sm">
+                <div className="bg-background rounded-full px-4 py-2 border border-primary/20">
+                  <span className="font-medium text-primary">🎓 IIT Madras Students</span>
+                </div>
+                <div className="bg-background rounded-full px-4 py-2 border border-accent-green/20">
+                  <span className="font-medium text-accent-green">🌾 Agriculture Tech</span>
+                </div>
+                <div className="bg-background rounded-full px-4 py-2 border border-secondary-dark/20">
+                  <span className="font-medium text-secondary-dark">🚀 Young Innovators</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
